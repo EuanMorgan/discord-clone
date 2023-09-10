@@ -10,6 +10,8 @@ body,
 
 @layer base {
   :root {
+    --discord-grey: #313338;
+
     --background: 0 0% 100%;
     --foreground: 20 14.3% 4.1%;
 
