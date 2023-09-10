@@ -20,6 +20,7 @@ import {
   Users,
 } from "lucide-react";
 import { VariantProps, cva } from "class-variance-authority";
+import { useModal } from "@/hooks/useModalStore";
 
 export interface ServerHeaderProps {
   server: ServerWithMembersWithProfiles;
@@ -27,6 +28,8 @@ export interface ServerHeaderProps {
 }
 
 const ServerHeader = ({ server, role }: ServerHeaderProps) => {
+  const { onOpen } = useModal();
+
   const isAdmin = role === MemberRole.ADMIN;
   const isModerator = isAdmin || role === MemberRole.MODERATOR;
 
@@ -43,7 +46,9 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
           <DropdownOption
             Icon={UserPlus}
             label="Invite People"
-            onClick={() => {}}
+            onClick={() => {
+              onOpen("invite", { server });
+            }}
             variant={"indigo"}
           />
         )}
@@ -124,6 +129,7 @@ const DropdownOption = ({
       className={optionVariants({
         variant,
       })}
+      onClick={onClick}
     >
       {label}
       <Icon className="ml-auto h-4 w-4" />
