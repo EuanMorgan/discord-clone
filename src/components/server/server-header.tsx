@@ -57,7 +57,9 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
           <DropdownOption
             Icon={Settings}
             label="Server Settings"
-            onClick={() => {}}
+            onClick={() => {
+              onOpen("editServer", { server });
+            }}
           />
         )}
 
