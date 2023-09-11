@@ -67,7 +67,9 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
           <DropdownOption
             Icon={Users}
             label="Manage Members"
-            onClick={() => {}}
+            onClick={() => {
+              onOpen("members", { server });
+            }}
           />
         )}
 
