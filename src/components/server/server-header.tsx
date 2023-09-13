@@ -77,7 +77,9 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
           <DropdownOption
             Icon={PlusCircle}
             label="Create Channel"
-            onClick={() => {}}
+            onClick={() => {
+              onOpen("createChannel", { server });
+            }}
           />
         )}
 

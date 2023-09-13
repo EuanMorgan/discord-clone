@@ -5,6 +5,7 @@ import useIsMounted from "@/hooks/useIsMounted";
 import InviteModal from "../modals/invite-modal";
 import EditServerModal from "../modals/edit-server-modal";
 import ManageMembersModal from "../modals/manage-members-modal";
+import CreateChannelModal from "../modals/create-channel-modal";
 
 // Render all modals here
 const ModalProvider = () => {
@@ -21,6 +22,7 @@ const ModalProvider = () => {
       <InviteModal />
       <EditServerModal />
       <ManageMembersModal />
+      <CreateChannelModal />
     </>
   );
 };
