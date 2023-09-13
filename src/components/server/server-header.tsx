@@ -89,7 +89,9 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
           <DropdownOption
             Icon={Trash}
             label="Delete Server"
-            onClick={() => {}}
+            onClick={() => {
+              onOpen("deleteServer", { server });
+            }}
             variant="destructive"
           />
         )}
@@ -98,7 +100,9 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
           <DropdownOption
             Icon={LogOut}
             label="Leave Server"
-            onClick={() => {}}
+            onClick={() => {
+              onOpen("leaveServer", { server });
+            }}
             variant="destructive"
           />
         )}
